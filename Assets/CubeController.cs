@@ -35,10 +35,11 @@ public class CubeController : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("collision.gameObject.tag:" + collision.gameObject.tag);
-        if (collision.gameObject.tag == "CubePrefab")
+        if (collision.gameObject.tag == "CubePrefab" || collision.gameObject.tag == "Ground")
         {
             audioSource = GetComponent<AudioSource>();
             audioSource.Play();
         }
+
     }
 }
